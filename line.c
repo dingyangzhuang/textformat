@@ -45,7 +45,7 @@ void write_line()
 		else {//如果是不是文本，就要插入空格，每个单词配合一个空格。
 			//比如5个单词，开头的时候还是5个，
 			spaces_to_insert = extra_spaces / (num_words - 1);
-			for (j= 0; i < spaces_to_insert+1; j++)
+			for (j= 0; j <= spaces_to_insert+1; j++)
 			{
 				putchar(' ');
 			}

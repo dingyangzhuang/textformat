@@ -1,6 +1,7 @@
 #include <string.h>
 #include "line.h"
 #include "word.h"
+#include "common.h"
 #define MAX_WORD_LEN 20
 
 int main() {
@@ -11,7 +12,9 @@ int main() {
 	{
 		read_word(word,MAX_WORD_LEN);
 		word_len = strlen(word);
+		PRINT_S(word);
 		if (word_len == 0) {//所有单词读完之后就flush
+			PRINT_S("start flush_line()");
 			flush_line();
 		}
 		if (word_len > MAX_WORD_LEN) {
